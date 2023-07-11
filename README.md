@@ -1,6 +1,6 @@
 # Quarkus Social
 
-Uma rede social simples, onde os usuarios podem enviar textos pequenos e podem seguir uns aos outros.
+>Uma rede social simples, onde os usuarios podem enviar textos pequenos e podem seguir uns aos outros.
 
 - USERS
 Deseja-se fazer o cadastro do usuarios da rede social,  o usuário envia algumas informações básicas para fazer seu cadastro, Haverá um endpoint para listagem de usuários.
@@ -14,6 +14,6 @@ Os usuários poderão ter seguidores e também seguir outros usuários para que 
 
 
 
-Versões java e maven utilizadas 09/07/2023
+>Versões java e maven utilizadas 09/07/2023
 - Apache maven 3.9.3
 - Java: 11.0.11
