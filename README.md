@@ -1,8 +1,5 @@
 # Quarkus Social
 
-
-Projeto utilizando Java e Quarkus simulando uma rede social simples, onde os usuarios podem enviar textos pequenos e podem seguir uns aos outros.
-
 Uma rede social simples, onde os usuarios podem enviar textos pequenos e podem seguir uns aos outros.
 
 - USERS
