@@ -15,5 +15,5 @@ Os usuários poderão ter seguidores e também seguir outros usuários para que 
 
 
 Versões java e maven utilizadas 09/07/2023
-•	Apache maven 3.9.3
-•	Java: 11.0.11
+- Apache maven 3.9.3
+- Java: 11.0.11
