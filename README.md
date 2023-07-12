@@ -12,7 +12,7 @@ Representam as postagens dos usuários, que serão em formato de um texto curto 
 Os usuários poderão ter seguidores e também seguir outros usuários para que possa visualizar suas postagens. Haverá opção de deixar se segir o usuário.
 
 
-
+https://quarkus.io/guides
 
 >Versões java e maven utilizadas 09/07/2023
 - Apache maven 3.9.3
