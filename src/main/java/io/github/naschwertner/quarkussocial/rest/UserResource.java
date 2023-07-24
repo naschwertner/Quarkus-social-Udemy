@@ -2,8 +2,8 @@ package io.github.naschwertner.quarkussocial.rest;
 
 import io.github.naschwertner.domain.model.User;
 import io.github.naschwertner.quarkussocial.rest.domain.repository.UserRepository;
-import io.github.naschwertner.quarkussocial.rest.quarkussocial.rest.CreateUserRequest;
-import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+import io.github.naschwertner.quarkussocial.rest.quarkussocial.rest.dto.CreateUserRequest;
+import io.github.naschwertner.quarkussocial.rest.quarkussocial.rest.dto.ResponseError;
 import io.quarkus.hibernate.orm.panache.PanacheQuery;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
@@ -36,9 +36,7 @@ public class UserResource {
 
         Set<ConstraintViolation<CreateUserRequest>> violations = validator.validate(userRequest);
         if(!violations.isEmpty()){
-            ConstraintViolation<CreateUserRequest> erro = violations.stream().findAny().get();
-            String errorMessage = erro.getMessage();
-            return Response.status(400).entity(errorMessage).build();
+            return ResponseError.createFromValidation(violations).withStatusCode(422);
         }
 
         User user = new User();
@@ -48,7 +46,9 @@ public class UserResource {
         //metodo do panache, a entidade tem todos os metodos para realizar a persistencia
         repository.persist(user); //persist metodo que salva entidade no bando de dados
         System.out.println("User after persist: " + user);
-        return Response.ok(user).build();
+        return Response.status(Response.Status.CREATED.getStatusCode())
+                .entity(user)
+                .build();
     }
 
     @GET
